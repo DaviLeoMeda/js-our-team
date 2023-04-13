@@ -37,18 +37,19 @@ const pathImg = `./assets/img/`
 
 let HTMLpath = document.querySelector('.row');
 
+
 for (let w = 0; w < team.length; w++) {
 
-    HTMLpath.innerHTML = `
-
-    <div class="col-4" style=">
-        <div class="card" style="width: 18rem;">
-            <img src=`${ path }${ team[i]['image'] } ` class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">${team[i]['name']}</h5>
-              <p class="card-text">${team[i]['role']}</p>
+    HTMLpath.innerHTML +=
+        `
+        <div class="col-4" style=">
+            <div class="card my-3" style="width: 18rem;">
+                <img src="${pathImg}${team[w]['image']}" class="card-img-top" alt="">
+                <div class="card-body text-center">
+                    <h5 class="card-title">${team[w]['name']}</h5>
+                    <p class="card-text">${team[w]['role']}</p>
+                </div>
             </div>
         </div>
-    </div>
     `
 }
