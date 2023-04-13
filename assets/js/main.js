@@ -1,3 +1,5 @@
+
+
 const team = [
     {
         name: 'Wayne Barnett',
@@ -30,3 +32,23 @@ const team = [
         image: 'barbara-ramos-graphic-designer.jpg',
     },
 ];
+
+const pathImg = `./assets/img/`
+
+let HTMLpath = document.querySelector('.row');
+
+for (let w = 0; w < team.length; w++) {
+
+    HTMLpath.innerHTML = `
+
+    <div class="col-4" style=">
+        <div class="card" style="width: 18rem;">
+            <img src=`${ path }${ team[i]['image'] } ` class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">${team[i]['name']}</h5>
+              <p class="card-text">${team[i]['role']}</p>
+            </div>
+        </div>
+    </div>
+    `
+}
